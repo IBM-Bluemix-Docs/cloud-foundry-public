@@ -32,7 +32,7 @@ Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), tha
 
 **Access Control** - Fine grain assignment/dispensing of compute capacity to development teams.
 
-**Automatic Placement** - Applications are automatically placed across multiple data-center PODs fpr maximum reliability.
+**Automatic Placement** - Applications are automatically placed across multiple data-center PODs for maximum reliability.
 
 **Automatic Health Management** - Crashing applications will restart automatically.
 
@@ -41,5 +41,3 @@ Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), tha
 **High Availaibility** - Supports full high avaialbility for extremely high application avaialbility
 
 **Automatic Deployment scaling** - The Auto-Scaling for IBM Cloud service enables you to automatically increase or decrease the compute capacity of your application, to rapidly adjust to dynamic loading needs.
-
-
