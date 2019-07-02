@@ -85,11 +85,11 @@ Figure 5. Multi-region application deployment
 You can run the **bluemix app stacks** command to show the available stacks, or root filesystems, that your apps are to be deployed to. You can also specify the stack when you use the **bluemix app push** command with the *-s* option and the *stack_name*, where the stack_name is the root filesystem, such as `lucid64` or `cflinuxfs2`:
 
 ```
-bluemix app push appName -s stack_name
+ibmcloud cf push appName -s stack_name
 ```
 
 You can use the `cf buildpacks` command to show the middleware components, such as WebSphere Liberty profile and SDK for Node.js, that are available as runtimes for your app to run in. And you can specify the runtime environment for your app by using the following command:
 
 ```
-bluemix app push appName -b buildpackname
+ibmcloud cf push appName -b buildpackname
 ```
