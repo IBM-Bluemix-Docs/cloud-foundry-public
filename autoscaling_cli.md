@@ -39,7 +39,7 @@ If you already logged into a Cloud Foundry environment on {{site.data.keyword.Bl
 
    If Cloud Foundry API endpoint is presented as `api.<DOMAIN>`, the App-Autoscaler API endpoint will be `autoscaler.<DOMAIN>` by default.  
 
-   `cf autoscaling-api (aka: aka)` is used to query and modify the App-Autoscaler API endpoint setting. 
+   `cf autoscaling-api (aka: asa)` is used to query and modify the App-Autoscaler API endpoint setting. 
   
    ```
    cf asa
