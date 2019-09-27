@@ -55,6 +55,7 @@ Cloud Foundry Public
         custom_domains.md
         updating_domains.md
         monitoring_logging_cloud_foundry_apps.md
+        [Zero Downtime Deployment](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html)
         autoscaling.md
         autoscaling_migration.md
     {: .navgroup-end}
