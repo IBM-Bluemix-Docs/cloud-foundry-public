@@ -8,7 +8,7 @@ lastupdated: "2019-08-08"
 
 {:shortdesc: .shortdesc}
 
-# Monitoring and logging Cloud Foundry apps
+# Logging and Monitoring
 {: #monitoring_logging_cloud_foundry_apps}
 
 {{site.data.keyword.Bluemix}} has a built-in logging mechanism to produce log files for your apps as they are running. In the logs, you can view the errors, warnings, and informational messages that are produced for your app. In addition, you can also configure your app to write log messages to the log file. For more information about log formats and how to view logs, see [Logging for apps running on Cloud Foundry](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-monitor_cfapp_logs).
