@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-11-15"
+lastupdated: "2019-12-23"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2019-11-15"
   * Dynamic scaling based on application performance metrics.
   * Scheduled scaling based on time.
 
-This capability is offered based on Cloud Foundry open source project [App-Autoscaler](https://github.com/cloudfoundry/app-autoscaler). Refer to [user guide](https://github.com/cloudfoundry/app-autoscaler/blob/develop/docs/Readme.md) to get started. 
+This capability is offered based on Cloud Foundry open source project [App-Autoscaler][autoscaler_project]. Refer to [user guide][autoscaler_user_guide] to get started. 
 
 ## Managing autoscaling from the console
 
@@ -143,7 +143,7 @@ To create a policy from scratch, follow steps below:
    * **Response time** represents the average amount of time the application takes to respond to a request in a given time period.  The unit of _Response time_ is "ms" (milliseconds).
    * **Throughput** is the total number of the processed requests  in a given time period. The unit of _throughput_ is "rps" (requests per second).
    * **Custom metric** 
-     You can define your own metric name using a combination of alphabets and numbers, and then emit the coresponding metrics to App Autoscaler in order to trigger dynamic scaling. See details in [Custom metric usage guide](https://github.com/cloudfoundry/app-autoscaler/tree/develop/docs#auto-scale-your-application-with-custom-metrics)
+     You can define your own metric name using a combination of alphabets and numbers, and then emit the coresponding metrics to App Autoscaler in order to trigger dynamic scaling. See details in [Custom metric usage guide][custom_metric_usage_guide].
 
    **Operator**, **Threshold**, **Breach Duration** , **Adjustment** and **Cooldown**: 
 
@@ -151,9 +151,9 @@ To create a policy from scratch, follow steps below:
    
    * **Operator** could be defined as `>=`, `>`, `<=` or `<`.
    * **Threshold** must be defined as a numeric value.  
-   * **Breach duration** is defined in `seconds`. 
+   * **Breach duration** is defined in `seconds`.  Optional, default value is 120 seconds.
    * **Adjustment** defines how to change the number of application instances in each scaling action.  You can specify an absolute number or a percentage of insatnces to add or remove.
-   * **Cooldown** defines the time duration to wait before the next scaling action takes place. A cooldown period helps to ensure that your application does not launch new instances or terminate old instances before your application becomes stable. **Cooldown** is defined in `seconds`
+   * **Cooldown** defines the time duration to wait before the next scaling action takes place. A cooldown period helps to ensure that your application does not launch new instances or terminate old instances before your application becomes stable. **Cooldown** is defined in `seconds`. **Cooldown**  is an optional setting as well, and the default value is 300 seconds. 
     
 4. (Optional) Define **Schedules** to scale your application during a set of time periods.
 
@@ -178,4 +178,25 @@ _Note_: the metric value is not the raw data from each application instance but 
 
 The **Scaling history** tab allows you to query the scaling events within the past 30 days. It also shows the error messages if the scaling attempt failed. 
 
+
+## Related readings
+
+* [Best practices when setting up autoscaling policies](https://www.ibm.com/cloud/blog/autoscale-your-cloud-foundry-applications-on-ibm-cloud)
+* [Bring Your Own Metrics to Autoscale Your IBM Cloud Foundry Applications](https://www.ibm.com/cloud/blog/bring-your-own-metrics-to-autoscale-your-ibm-cloud-foundry-applications)
+
+
+
+
+[autoscaler_project]: https://github.com/cloudfoundry/app-autoscaler
+[autoscaler_user_guide]: https://github.com/cloudfoundry/app-autoscaler/blob/master/docs/Readme.md
+[autoscaling_policy]:https://github.com/cloudfoundry/app-autoscaler/blob/master/docs/policy.md
+[autoscaler_cli]: https://github.com/cloudfoundry/app-autoscaler-cli-plugin#cloud-foundry-cli-autoscaler-plug-in-
+[autoscaling_cfee_doc]: https://{DomainName}/docs/cloud-foundry?topic=cloud-foundry-autoscale_cloud_foundry_apps#autoscale_cloud_foundry_apps
+[metric_type]: https://github.com/cloudfoundry/app-autoscaler/blob/master/docs/Readme.md#metric-types
+[deploy_app]: https://{DomainName}/docs/cloud-foundry/deploy-apps.html#dep_apps
+[legacy-autoscaling-catalog]: https://{DomainName}/catalog/services/auto-scaling
+[legacy-autoscaling-cli]: https://{DomainName}/docs/cli?topic=auto-scaling-cli-autoscalingcli#bx_as_policy_show
+[migrate_guide]: https://{DomainName}/docs/cloud-foundry-public?topic=cloud-foundry-public-autoscale_migration
+[autoscaler_cli]: https://{DomainName}/docs/cloud-foundry-public?topic=cloud-foundry-public-autoscale_cli
+[custom_metric_usage_guide]: https://github.com/cloudfoundry/app-autoscaler/tree/develop/docs#auto-scale-your-application-with-custom-metrics
 
