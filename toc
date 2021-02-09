@@ -105,7 +105,6 @@ Cloud Foundry Public
         monitoring_logging_cloud_foundry_apps.md
         at-events.md
         [Rolling App Deployments](https://docs.cloudfoundry.org/devguide/deploy-apps/rolling-deploy.html)
-        ha-dr.md
         autoscaling.md
 
     {: .topicgroup}
@@ -127,6 +126,7 @@ Cloud Foundry Public
     [Cloud Foundry Community](https://www.cloudfoundry.org/)
     [Cloud Foundry Docs](https://docs.cloudfoundry.org/)
     cfp_responsibilities.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
